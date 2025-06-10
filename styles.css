@@ -1,0 +1,204 @@
+:root {
+    --light-grey: #f5f6f7;
+    --dark-blue: #0a0a23;
+    --fcc-blue: #1b1b32;
+    --light-yellow: #fecc4c;
+    --dark-yellow: #feac32;
+    --light-pink: #ffadad;
+    --dark-red: #650000;
+    --light-red: #350000;
+    --light-green: #acd157;
+    --search-bg: #262657;
+    --search-border: #1f1f49;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    /* background-color: var(--dark-red); */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: var(--light-grey);
+    line-height: 1.5;
+}
+.container {
+    width: 90%;
+    max-width: 700px;
+    margin: 20px auto;
+    background-color: var(--dark-blue);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+}
+h1 {
+    color: var(--light-yellow);
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+fieldset {
+    border: 2px solid var(--light-grey);
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    position: relative;
+}
+legend {
+    font-weight: bold;
+    color: var(--light-yellow);
+    padding: 0 10px;
+}
+label {
+    color: var(--light-grey);
+    margin-bottom: 5px;
+    display: block;
+    font-weight: bold;
+}
+input[type="number"],
+input[type="text"],
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--light-grey);
+    border-radius: 4px;
+    outline: none;
+    color: var(--dark-blue);
+    /* font-size: 16px; */
+    margin-bottom: 10px;
+}
+input::placeholder {
+    color: var(--dark-blue);
+    opacity: 0.7;
+}
+.templateEntry {
+    margin-bottom: 15px;
+    border: 1px dashed var(--light-grey);
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+}
+.templateEntry label,
+.templateEntry input {
+    margin-bottom: 5px;
+}
+button {
+    background-color: var(--light-yellow);
+    border: 2px solid var(--dark-yellow);
+    cursor: pointer;
+    text-decoration: none; 
+    color: var(--dark-blue);
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-weight: bold;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    margin-bottom: 10px;
+}
+button:hover {
+    background-color: var(--dark-yellow);
+    border-color: var(--light-yellow);
+}
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.controls label,
+.controls select {
+    margin-bottom: 0;
+}
+.controls button {
+    flex-shrink: 0;
+}
+form > div:last-of-type {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+.search-results { /*Here is the search results container, containing the displayed results*/
+    position: absolute;
+    background-color: var(--search-bg);
+    border: 1px solid var(--search-border);
+    border-radius: 4px;
+    max-height: 200px;
+    overflow-y: auto; /**/ /*add vertical scrollbar if content exceeds max-height*/
+    z-index: 100; /*ensures it appears above other elements*/
+    width: 100%;  /*width: calc(100% - 20px)*/
+    left: 10px;
+    top: calc(100% + 5px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* display: none; */
+}
+.search-result-food {
+    padding: 8px 10px;
+    cursor: pointer;
+    border-bottom: 1px solid var(--search-border);
+    color: var(--light-grey);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.search-result-food:last-child {
+    border-bottom: none;
+}
+.search-result-food:hover {
+    background-color: var(--dark-blue);
+}
+.search-result-food span {
+    font-weight: bold;
+    color: var(--light-yellow);
+}
+.output {
+    margin: 20px auto;
+    border: 2px solid var(--light-grey);
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: var(--dark-blue);
+}
+.output span {
+    font-weight: bold;
+    font-size: 1.5em;
+    display: block;
+    margin-bottom: 10px;
+}
+.output hr {
+    border-color: var(--fcc-blue);
+    margin: 15px 0;
+}
+.output p {
+    margin: 5px 0;
+    color: var(--light-grey);
+}
+.output {
+    margin: 20px auto;
+    border: 2px solid var(--light-grey);
+    padding: 15px; 
+    text-align: center;
+    border-radius: 8px; 
+    background-color: var(--dark-blue); 
+}
+.output span {
+    font-weight: bold;
+    font-size: 1.5em; 
+    display: block; 
+    margin-bottom: 10px;
+}
+.output hr {
+    border-color: var(--fcc-blue); 
+    margin: 15px 0; 
+}
+.output p {
+    margin: 5px 0; 
+    color: var(--light-grey); 
+}
+.surplus {
+    color: var(--light-pink);
+}
+.deficit {
+    color: var(--light-green);
+}
